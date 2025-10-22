@@ -4,3 +4,11 @@
 @import "~@edx/brand/paragon/overrides";
 
 @import "sass/style";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Scheherazade+New:wght@400;500;600;700&display=swap');
+
+
+body {
+  font-family: 'Cairo', sans-serif;
+}
