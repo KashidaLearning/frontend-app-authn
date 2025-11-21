@@ -1,2 +1,15 @@
 @use "@openedx/paragon/styles/css/core/custom-media-breakpoints" as paragonCustomMediaBreakpoints;
 @import "sass/style";
+
+.bg-primary-400 {
+  background-color: #00B2AB !important;
+}
+
+
+.large-screen-svg-primary {
+     fill: #00B2AB !important;
+}
+
+.text-accent-a {
+    color: #A1C440!important;
+}
