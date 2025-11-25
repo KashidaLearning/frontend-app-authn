@@ -1,13 +1,6 @@
 @use "@openedx/paragon/styles/css/core/custom-media-breakpoints" as paragonCustomMediaBreakpoints;
 @import "sass/style";
 
-@font-face {
-  font-family: "GE Dinar One";
-  src: url("./fonts/GE-Dinar-One-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
 .bg-primary-400 {
   background-color: #00B2AB !important;
 }
