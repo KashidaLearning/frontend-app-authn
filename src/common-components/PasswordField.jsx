@@ -133,6 +133,8 @@ const PasswordField = (props) => {
           controlClassName={props.borderClass}
           trailingElement={isPasswordHidden ? ShowButton : HideButton}
           floatingLabel={props.floatingLabel}
+          placeholder={props.placeholder}
+
         />
       </OverlayTrigger>
       {props.errorMessage !== '' && (
@@ -155,6 +157,7 @@ PasswordField.defaultProps = {
   showRequirements: true,
   showScreenReaderText: true,
   autoComplete: null,
+  placeholder: '',
 };
 
 PasswordField.propTypes = {
@@ -170,6 +173,7 @@ PasswordField.propTypes = {
   value: PropTypes.string.isRequired,
   autoComplete: PropTypes.string,
   showScreenReaderText: PropTypes.bool,
+  placeholder: PropTypes.string,
 };
 
 export default PasswordField;

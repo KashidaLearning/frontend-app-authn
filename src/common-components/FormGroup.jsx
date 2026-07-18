@@ -39,6 +39,7 @@ const FormGroup = (props) => {
         controlClassName={props.borderClass}
         trailingElement={props.trailingElement}
         floatingLabel={props.floatingLabel}
+        placeholder={props.placeholder}
       >
         {props.options ? props.options() : null}
       </Form.Control>
@@ -79,6 +80,7 @@ FormGroup.defaultProps = {
   spellCheck: null,
   trailingElement: null,
   type: 'text',
+  placeholder: '',
 };
 
 FormGroup.propTypes = {
@@ -101,6 +103,7 @@ FormGroup.propTypes = {
   trailingElement: PropTypes.element,
   type: PropTypes.string,
   value: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
 };
 
 export default FormGroup;

@@ -260,7 +260,8 @@ const LoginPage = ({
             handleChange={handleOnChange}
             handleFocus={handleOnFocus}
             errorMessage={errors.emailOrUsername}
-            floatingLabel={formatMessage(messages['login.user.identity.label'])}
+            floatingLabel="اسم المستخدم"
+            placeholder="اسم المستخدم"
           />
           <PasswordField
             name="password"
@@ -271,7 +272,8 @@ const LoginPage = ({
             handleChange={handleOnChange}
             handleFocus={handleOnFocus}
             errorMessage={errors.password}
-            floatingLabel={formatMessage(messages['login.password.label'])}
+            floatingLabel="كلمة السر"
+            placeholder="كلمة السر"
           />
           <StatefulButton
             name="sign-in"
@@ -281,7 +283,7 @@ const LoginPage = ({
             className="login-button-width"
             state={submitState}
             labels={{
-              default: formatMessage(messages['sign.in.button']),
+              default: 'تسجيل الدخول',
               pending: '',
             }}
             onClick={handleSubmit}
@@ -294,7 +296,7 @@ const LoginPage = ({
             to={updatePathWithQueryParams(RESET_PAGE)}
             onClick={trackForgotPasswordLinkClick}
           >
-            {formatMessage(messages['forgot.password'])}
+            نسيت كلمة السر الخاصة بي
           </Link>
           <ThirdPartyAuth
             currentProvider={currentProvider}

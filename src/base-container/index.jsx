@@ -10,9 +10,22 @@ import { DefaultLargeLayout, DefaultMediumLayout, DefaultSmallLayout } from './c
 import {
   ImageExtraSmallLayout, ImageLargeLayout, ImageMediumLayout, ImageSmallLayout,
 } from './components/image-layout';
+import RowadAuthLayout from './components/rowad-auth-layout/RowadAuthLayout';
 import { AuthLargeLayout, AuthMediumLayout, AuthSmallLayout } from './components/welcome-page-layout';
 
-const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
+const BaseContainer = ({
+  children,
+  showWelcomeBanner,
+  fullName,
+  useRowadLayout,
+}) => {
+  if (useRowadLayout) {
+    return (
+      <RowadAuthLayout>
+        {children}
+      </RowadAuthLayout>
+    );
+  }
   const enableImageLayout = getConfig().ENABLE_IMAGE_LAYOUT;
 
   if (enableImageLayout) {
@@ -61,12 +74,13 @@ const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
 BaseContainer.defaultProps = {
   showWelcomeBanner: false,
   fullName: null,
+  useRowadLayout: false,
 };
-
 BaseContainer.propTypes = {
   children: PropTypes.node.isRequired,
   showWelcomeBanner: PropTypes.bool,
   fullName: PropTypes.string,
+  useRowadLayout: PropTypes.bool,
 };
 
 export default BaseContainer;

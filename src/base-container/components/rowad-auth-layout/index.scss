@@ -1,0 +1,681 @@
+.rowad-auth-layout {
+  display: grid;
+  grid-template-areas: "form brand";
+  grid-template-columns: minmax(0, 774fr) minmax(0, 630fr);
+  align-items: stretch;
+  gap: 12px;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  padding: 12px;
+
+  direction: ltr;
+  overflow-x: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #0a1a19 0%,
+      #16413d 50%,
+      #0a1a19 100%
+    );
+}
+
+.rowad-auth-layout__form-panel {
+  grid-area: form;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  padding: 80px;
+  direction: rtl;
+}
+
+.rowad-auth-layout__glass-card {
+  box-sizing: border-box;
+  width: 614px;
+  max-width: 100%;
+  min-height: 398px;
+  padding: 48px;
+
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.07);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 48px;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.rowad-auth-layout__brand {
+  grid-area: brand;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+}
+
+.rowad-auth-layout__brand-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rowad-auth-layout__logo {
+  display: block;
+  width: 630px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.rowad-auth-tabs {
+  display: flex;
+  width: 518px;
+  max-width: 100%;
+  height: 35px;
+  padding: 0;
+  margin: 0 0 48px;
+
+  direction: rtl;
+  overflow: hidden;
+
+  background: #e8eeed;
+  border: 0;
+  border-radius: 16px;
+  direction: ltr !important;
+}
+
+.rowad-auth-tabs__tab {
+   flex: 1 1 50%;
+  height: 35px;
+  padding: 0 16px;
+
+  color: #72817f;
+  font-family: "DIN Next LT Arabic", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 35px;
+  text-align: center;
+
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: none;
+  color: #64748B;
+}
+.rowad-auth-tabs__tab:hover,
+.rowad-auth-tabs__tab:focus {
+  color: #18504d;
+  outline: none;
+}
+
+.rowad-auth-tabs__tab--active,
+.rowad-auth-tabs__tab--active:hover,
+.rowad-auth-tabs__tab--active:focus {
+  color: #ffffff;
+  background: #18504d;
+}
+/* Remove the default Authn form sizing and spacing */
+.rowad-auth-layout .main-content {
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.rowad-auth-layout .mw-xs {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Exact Figma login form */
+.rowad-auth-layout #sign-in-form {
+  display: grid;
+  grid-template-columns: 342px minmax(0, 166px);
+  column-gap: 10px;
+  row-gap: 10px;
+
+  width: 518px;
+  max-width: 100%;
+  margin: 0;
+
+  direction: rtl;
+}
+
+/* Each field occupies the complete 518px form width */
+.rowad-auth-layout #sign-in-form > .pgn__form-group {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0 0 25px !important;
+}
+
+/* Input and password containers */
+.rowad-auth-layout #sign-in-form .pgn__form-control-decorator-group {
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  overflow: visible;
+
+  background: rgba(243, 243, 245, 0.05) !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 14px !important;
+
+  box-shadow: none !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Exact Figma input */
+.rowad-auth-layout #sign-in-form .form-control {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  padding: 4px 12px !important;
+
+  color: #ffffff !important;
+  font-family: "DIN Next LT Arabic", Arial, sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  text-align: right !important;
+
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Figma labels are always displayed above the fields */
+.rowad-auth-layout #sign-in-form .pgn__form-control-floating-label {
+  position: absolute !important;
+  top: -22px !important;
+  right: 0 !important;
+  left: auto !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  color: #ffffff !important;
+  font-family: "DIN Next LT Arabic", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+
+  pointer-events: none;
+  background: transparent !important;
+  transform: none !important;
+}
+
+/* Keep the eye icon on the left in RTL */
+.rowad-auth-layout #sign-in-form .pgn__form-control-decorator-trailing {
+  right: auto !important;
+  left: 12px !important;
+
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Exact Figma orange sign-in button: 342 × 47 */
+.rowad-auth-layout #sign-in {
+  grid-column: 1;
+  box-sizing: border-box !important;
+  width: 342px !important;
+  max-width: 100% !important;
+  height: 47px !important;
+  min-height: 47px !important;
+  padding: 0 18px !important;
+  margin: 0 !important;
+
+  color: #ffffff !important;
+  font-family: "DIN Next LT Arabic", Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 47px !important;
+  text-align: center !important;
+
+  background: #f08f62 !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.rowad-auth-layout #sign-in:hover,
+.rowad-auth-layout #sign-in:focus,
+.rowad-auth-layout #sign-in:active {
+  color: #ffffff !important;
+  background: #e78053 !important;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.pgn__form-control-floating-label .pgn__form-control-floating-label-text{
+    background-color: none !important;
+}
+.pgn__form-control-floating-label .pgn__form-control-floating-label-text{
+    background-color: none !important;
+}
+.pgn__form-control-floating-label .pgn__form-control-floating-label-text {
+   
+    background: none !important;
+}
+ 
+/* Forgot-password area beside the button */
+.rowad-auth-layout #forgot-password {
+  grid-column: 2;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-start;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 47px;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  color: #ffffff !important;
+  font-family: "DIN Next LT Arabic", Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  text-align: right !important;
+  white-space: normal;
+
+  background: transparent !important;
+  border: 0 !important;
+  text-decoration: none !important;
+}
+
+.rowad-auth-layout #forgot-password:hover,
+.rowad-auth-layout #forgot-password:focus {
+  color: #f08f62 !important;
+  text-decoration: underline !important;
+}
+
+/* Any additional authentication content spans the full form */
+.rowad-auth-layout #sign-in-form > :not(.pgn__form-group):not(#sign-in):not(#forgot-password) {
+  grid-column: 1 / -1;
+}
+/* Final Figma alignment corrections */
+.rowad-auth-layout__glass-card {
+  height: 398px;
+  min-height: 398px;
+}
+
+/* Remove Paragon's label background */
+.rowad-auth-layout #sign-in-form .pgn__form-control-floating-label,
+.rowad-auth-layout #sign-in-form .pgn__form-control-floating-label-content {
+  padding: 0 !important;
+  margin: 0 !important;
+
+  color: #ffffff !important;
+  border: 0 !important;
+      font-family: DIN Next LT Arabic !important;
+font-size: 12px;
+font-weight: 500px;
+
+}
+
+/* Position labels cleanly above each field */
+.rowad-auth-layout #sign-in-form .pgn__form-control-floating-label {
+  top: -20px !important;
+  right: 0 !important;
+  left: auto !important;
+
+  width: auto !important;
+  height: 16px !important;
+
+  font-size: 12px !important;
+  line-height: 20px !important;
+  text-align: right !important;
+
+  transform: none !important;
+      font-family: DIN Next LT Arabic !important;
+    font-weight: 500;
+
+}
+
+/* Keep enough space for the next field label */
+.rowad-auth-layout #sign-in-form > .pgn__form-group {
+  margin-bottom: 22px !important;
+}
+
+/* Figma has only 10px between password field and action row */
+.rowad-auth-layout #sign-in-form > .pgn__form-group:nth-of-type(2) {
+  margin-bottom: 0 !important;
+}
+
+/* Input text should begin from the right */
+.rowad-auth-layout #sign-in-form .form-control {
+  padding: 4px 12px !important;
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Eye icon belongs on the left */
+.rowad-auth-layout #sign-in-form .pgn__form-control-decorator-trailing {
+  top: 50% !important;
+  right: auto !important;
+  left: 12px !important;
+
+  color: #ffffff !important;
+  transform: translateY(-50%) !important;
+}
+
+/* Make sure the password text does not overlap the eye */
+.rowad-auth-layout #password {
+  padding-right: 12px !important;
+  padding-left: 48px !important;
+}
+
+/* Action row alignment */
+.rowad-auth-layout #sign-in {
+  align-self: center;
+}
+
+.rowad-auth-layout #forgot-password {
+  align-self: center;
+  justify-content: flex-start;
+
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+/* Responsive form */
+@media (max-width: 575.98px) {
+  .rowad-auth-layout #sign-in-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .rowad-auth-layout #sign-in {
+    width: 100% !important;
+  }
+
+  .rowad-auth-layout #forgot-password {
+    justify-content: center;
+  }
+}
+@media (max-width: 1199.98px) {
+  .rowad-auth-layout {
+    grid-template-areas:
+      "brand"
+      "form";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+  }
+
+  .rowad-auth-layout__brand {
+    padding: 40px 24px 0;
+  }
+
+  .rowad-auth-layout__form-panel {
+    padding: 40px 24px 64px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .rowad-auth-layout {
+    padding: 8px;
+  }
+
+  .rowad-auth-layout__brand {
+    padding-top: 24px;
+  }
+
+  .rowad-auth-layout__logo {
+    width: 126px;
+    height: auto;
+  }
+
+  .rowad-auth-layout__form-panel {
+    align-items: flex-start;
+    padding: 24px 8px 40px;
+  }
+
+  .rowad-auth-layout__glass-card {
+    padding: 24px 20px;
+    border-radius: 32px;
+  }
+}
+/* Final Figma alignment corrections */
+.rowad-auth-layout__glass-card {
+  height: 398px;
+  min-height: 398px;
+}
+
+/* Remove Paragon's label background */
+.rowad-auth-layout #sign-in-form .pgn__form-control-floating-label,
+.rowad-auth-layout #sign-in-form .pgn__form-control-floating-label-content {
+  padding: 0 !important;
+  margin: 0 !important;
+
+  color: #ffffff !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Position labels cleanly above each field */
+.rowad-auth-layout #sign-in-form .pgn__form-control-floating-label {
+  top: -20px !important;
+  right: 0 !important;
+  left: auto !important;
+
+  width: auto !important;
+  height: 16px !important;
+
+  font-size: 11px !important;
+  line-height: 16px !important;
+  text-align: right !important;
+
+  transform: none !important;
+}
+
+/* Keep enough space for the next field label */
+.rowad-auth-layout #sign-in-form > .pgn__form-group {
+  margin-bottom: 22px !important;
+}
+
+/* Figma has only 10px between password field and action row */
+.rowad-auth-layout #sign-in-form > .pgn__form-group:nth-of-type(2) {
+  margin-bottom: 0 !important;
+}
+
+/* Input text should begin from the right */
+.rowad-auth-layout #sign-in-form .form-control {
+  padding: 4px 12px !important;
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Eye icon belongs on the left */
+.rowad-auth-layout #sign-in-form .pgn__form-control-decorator-trailing {
+  top: 50% !important;
+  right: auto !important;
+  left: 12px !important;
+
+  color: #ffffff !important;
+  transform: translateY(-50%) !important;
+}
+
+/* Make sure the password text does not overlap the eye */
+.rowad-auth-layout #password {
+  padding-right: 12px !important;
+  padding-left: 48px !important;
+}
+
+/* Action row alignment */
+.rowad-auth-layout #sign-in {
+  align-self: center;
+}
+
+.rowad-auth-layout #forgot-password {
+  align-self: center;
+  justify-content: flex-start;
+
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+/* Registration uses a taller card than the 398px login card */
+.rowad-auth-layout__glass-card:has(#registration-form) {
+  width: 614px;
+  height: auto;
+  min-height: 0;
+  max-height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+
+/* Remove default registration sizing */
+.rowad-auth-layout #registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  width: 518px;
+  max-width: 100%;
+  margin: 0;
+
+  direction: rtl;
+}
+
+.rowad-auth-layout #registration-form .pgn__form-group {
+  width: 100%;
+  margin: 0 !important;
+}
+
+/* Exact Figma registration fields: 518 × 46 */
+.rowad-auth-layout #registration-form .pgn__form-control-decorator-group {
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  overflow: visible;
+
+  background: rgba(243, 243, 245, 0.05) !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 14px !important;
+
+  box-shadow: none !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.rowad-auth-layout #registration-form .form-control {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  padding: 4px 12px !important;
+
+  direction: rtl !important;
+  color: #ffffff !important;
+  font-family: "DIN Next LT Arabic", Arial, sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  text-align: right !important;
+
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Registration labels above the fields */
+.rowad-auth-layout #registration-form .pgn__form-control-floating-label,
+.rowad-auth-layout #registration-form .pgn__form-control-floating-label-content {
+  padding: 0 !important;
+  margin: 0 !important;
+
+  color: #ffffff !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.rowad-auth-layout #registration-form .pgn__form-control-floating-label {
+  position: absolute !important;
+  top: -22px !important;
+  right: 0 !important;
+  left: auto !important;
+
+  width: auto !important;
+  height: 16px !important;
+
+  font-family: "DIN Next LT Arabic", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  text-align: right !important;
+
+  pointer-events: none;
+  transform: none !important;
+}
+
+/* Registration password eye */
+.rowad-auth-layout #registration-form .pgn__form-control-decorator-trailing {
+  top: 50% !important;
+  right: auto !important;
+  left: 12px !important;
+
+  color: #ffffff !important;
+  transform: translateY(-50%) !important;
+}
+
+.rowad-auth-layout #registration-form #password {
+  padding-right: 12px !important;
+  padding-left: 48px !important;
+}
+
+/* Exact orange registration button */
+.rowad-auth-layout #register-user {
+  width: 100% !important;
+  height: 47px !important;
+  min-height: 47px !important;
+  padding: 0 18px !important;
+  margin: 0 !important;
+
+  color: #ffffff !important;
+  font-family: "DIN Next LT Arabic", Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 47px !important;
+  text-align: center !important;
+
+  background: #f08f62 !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.rowad-auth-layout #register-user:hover,
+.rowad-auth-layout #register-user:focus,
+.rowad-auth-layout #register-user:active {
+  color: #ffffff !important;
+  background: #e78053 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.rowad-auth-layout .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-family: "DIN Next LT Arabic", Arial, sans-serif !important;
+  font-size: 12px !important;
+  text-align: right !important;
+  opacity: 1 !important;
+}
+
+.rowad-auth-layout .form-control::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.55) !important;
+  text-align: right !important;
+  opacity: 1 !important;
+}

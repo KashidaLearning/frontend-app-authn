@@ -102,7 +102,7 @@ const Logistration = ({
   };
 
   return (
-    <BaseContainer>
+    <BaseContainer useRowadLayout>
       <div>
         {disablePublicAccountCreation
           ? (
@@ -132,14 +132,35 @@ const Logistration = ({
                   </Tabs>
                 )
                 : (!isValidTpaHint() && !hideRegistrationLink && (
-                  <Tabs
-                    defaultActiveKey={selectedPage}
-                    id="controlled-tab"
-                    onSelect={(tabKey) => handleOnSelect(tabKey, selectedPage)}
+                  <div
+                    className="rowad-auth-tabs"
+                    role="tablist"
+                    aria-label="تسجيل الدخول وإنشاء حساب"
                   >
-                    <Tab title={formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />
-                    <Tab title={formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />
-                  </Tabs>
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={selectedPage === LOGIN_PAGE}
+                      className={`rowad-auth-tabs__tab ${
+                    selectedPage === LOGIN_PAGE ? 'rowad-auth-tabs__tab--active' : ''
+                  }`}
+                      onClick={() => handleOnSelect(LOGIN_PAGE, selectedPage)}
+                    >
+                      تسجيل الدخول
+                    </button>
+
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={selectedPage === REGISTER_PAGE}
+                      className={`rowad-auth-tabs__tab ${
+                    selectedPage === REGISTER_PAGE ? 'rowad-auth-tabs__tab--active' : ''
+                  }`}
+                      onClick={() => handleOnSelect(REGISTER_PAGE, selectedPage)}
+                    >
+                      إنشاء حساب
+                    </button>
+                  </div>
                 ))}
               {key && (
                 <Navigate to={updatePathWithQueryParams(key)} replace />
