@@ -37,26 +37,30 @@ const MainApp = () => (
       <link rel="shortcut icon" href={getConfig().FAVICON_URL} type="image/x-icon" />
     </Helmet>
     {getConfig().ZENDESK_KEY && <Zendesk />}
-    <Routes>
-      <Route path="/" element={<Navigate replace to={updatePathWithQueryParams(REGISTER_PAGE)} />} />
-      <Route
-        path={REGISTER_EMBEDDED_PAGE}
-        element={<EmbeddedRegistrationRoute><RegistrationPage /></EmbeddedRegistrationRoute>}
-      />
-      <Route
-        path={LOGIN_PAGE}
-        element={
-          <UnAuthOnlyRoute><Logistration selectedPage={LOGIN_PAGE} /></UnAuthOnlyRoute>
-        }
-      />
-      <Route path={REGISTER_PAGE} element={<UnAuthOnlyRoute><Logistration /></UnAuthOnlyRoute>} />
-      <Route path={RESET_PAGE} element={<UnAuthOnlyRoute><ForgotPasswordPage /></UnAuthOnlyRoute>} />
-      <Route path={PASSWORD_RESET_CONFIRM} element={<ResetPasswordPage />} />
-      <Route path={AUTHN_PROGRESSIVE_PROFILING} element={<ProgressiveProfiling />} />
-      <Route path={RECOMMENDATIONS} element={<RecommendationsPage />} />
-      <Route path={PAGE_NOT_FOUND} element={<NotFoundPage />} />
-      <Route path="*" element={<Navigate replace to={PAGE_NOT_FOUND} />} />
-    </Routes>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <main style={{ flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<Navigate replace to={updatePathWithQueryParams(REGISTER_PAGE)} />} />
+          <Route
+            path={REGISTER_EMBEDDED_PAGE}
+            element={<EmbeddedRegistrationRoute><RegistrationPage /></EmbeddedRegistrationRoute>}
+          />
+          <Route
+            path={LOGIN_PAGE}
+            element={
+              <UnAuthOnlyRoute><Logistration selectedPage={LOGIN_PAGE} /></UnAuthOnlyRoute>
+            }
+          />
+          <Route path={REGISTER_PAGE} element={<UnAuthOnlyRoute><Logistration /></UnAuthOnlyRoute>} />
+          <Route path={RESET_PAGE} element={<UnAuthOnlyRoute><ForgotPasswordPage /></UnAuthOnlyRoute>} />
+          <Route path={PASSWORD_RESET_CONFIRM} element={<ResetPasswordPage />} />
+          <Route path={AUTHN_PROGRESSIVE_PROFILING} element={<ProgressiveProfiling />} />
+          <Route path={RECOMMENDATIONS} element={<RecommendationsPage />} />
+          <Route path={PAGE_NOT_FOUND} element={<NotFoundPage />} />
+          <Route path="*" element={<Navigate replace to={PAGE_NOT_FOUND} />} />
+        </Routes>
+      </main>
+    </div>
   </AppProvider>
 );
 
