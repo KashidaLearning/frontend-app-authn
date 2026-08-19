@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("./fonts/DINNextLTArabic-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("./fonts/DINNextLTArabic-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("./fonts/DINNextLTArabic-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 .rowad-auth-layout {
   display: grid;
   grid-template-areas: "form brand";
@@ -678,4 +702,65 @@ font-weight: 500px;
   color: rgba(255, 255, 255, 0.55) !important;
   text-align: right !important;
   opacity: 1 !important;
+}
+
+
+/* Rowad login and registration: fixed Figma labels and Arabic typography. */
+.rowad-auth-layout,
+.rowad-auth-layout button,
+.rowad-auth-layout input,
+.rowad-auth-layout label,
+.rowad-auth-layout .pgn__form-text {
+  font-family: "DIN Next LT Arabic", Arial, sans-serif !important;
+}
+
+.rowad-auth-layout .rowad-auth-static-label {
+  position: static !important;
+  display: block !important;
+  width: 100% !important;
+  height: 20px !important;
+  margin: 0 0 6px !important;
+  padding: 0 !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  text-align: right !important;
+  background: transparent !important;
+}
+
+.rowad-auth-layout #sign-in-form > .pgn__form-group,
+.rowad-auth-layout #registration-form .pgn__form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.rowad-auth-layout #sign-in-form {
+  row-gap: 18px !important;
+}
+
+.rowad-auth-layout #registration-form {
+  gap: 18px !important;
+}
+
+.rowad-auth-layout #registration-form .pgn__form-text,
+.rowad-auth-layout #sign-in-form .pgn__form-text,
+.rowad-auth-layout #registration-form .pgn__form-control-description,
+.rowad-auth-layout #sign-in-form .pgn__form-control-description {
+  position: static !important;
+  display: block !important;
+  margin-top: 6px !important;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  text-align: right !important;
+}
+
+.rowad-auth-layout .form-control,
+.rowad-auth-layout .form-control::placeholder {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
 }

@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import './index.scss';
 
 const ROWAD_WEBSITE_URL = 'https://d1p65zue2xzvrm.cloudfront.net/';
-const ROWAD_ARABIC_LOGO_URL = '/authn/images/rowad-logo-ar-light.png';
+const ROWAD_ARABIC_LOGO_URL = process.env.NODE_ENV === 'development'
+  ? '/images/rowad-logo-ar-light.png'
+  : '/authn/images/rowad-logo-ar-light.png';
 const RowadAuthLayout = ({ children }) => (
   <div className="rowad-auth-layout" dir="rtl">
     <main className="rowad-auth-layout__form-panel">

@@ -22,6 +22,11 @@ const FormGroup = (props) => {
 
   return (
     <Form.Group controlId={props.name} className={props.className} isInvalid={props.errorMessage !== ''}>
+      {props.staticLabel && (
+        <label className="rowad-auth-static-label" htmlFor={props.name}>
+          {props.floatingLabel}
+        </label>
+      )}
       <Form.Control
         as={props.as}
         readOnly={props.readOnly}
@@ -38,7 +43,7 @@ const FormGroup = (props) => {
         onChange={props.handleChange}
         controlClassName={props.borderClass}
         trailingElement={props.trailingElement}
-        floatingLabel={props.floatingLabel}
+        floatingLabel={props.staticLabel ? undefined : props.floatingLabel}
         placeholder={props.placeholder}
       >
         {props.options ? props.options() : null}
@@ -64,6 +69,7 @@ const FormGroup = (props) => {
 };
 
 FormGroup.defaultProps = {
+  staticLabel: false,
   as: 'input',
   autoComplete: null,
   borderClass: '',
@@ -84,6 +90,7 @@ FormGroup.defaultProps = {
 };
 
 FormGroup.propTypes = {
+  staticLabel: PropTypes.bool,
   as: PropTypes.string,
   autoComplete: PropTypes.string,
   borderClass: PropTypes.string,

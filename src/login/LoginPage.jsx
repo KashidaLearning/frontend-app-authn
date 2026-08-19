@@ -260,6 +260,7 @@ const LoginPage = ({
             handleChange={handleOnChange}
             handleFocus={handleOnFocus}
             errorMessage={errors.emailOrUsername}
+            staticLabel
             floatingLabel="اسم المستخدم"
             placeholder="اسم المستخدم"
           />
@@ -272,6 +273,7 @@ const LoginPage = ({
             handleChange={handleOnChange}
             handleFocus={handleOnFocus}
             errorMessage={errors.password}
+            staticLabel
             floatingLabel="كلمة السر"
             placeholder="كلمة السر"
           />

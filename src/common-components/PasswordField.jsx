@@ -118,6 +118,11 @@ const PasswordField = (props) => {
 
   return (
     <Form.Group controlId={props.name} isInvalid={props.errorMessage !== ''}>
+      {props.staticLabel && (
+        <label className="rowad-auth-static-label" htmlFor={props.name}>
+          {props.floatingLabel}
+        </label>
+      )}
       <OverlayTrigger key="tooltip" placement={placement} overlay={tooltip} show={showTooltip}>
         <Form.Control
           as="input"
@@ -132,7 +137,7 @@ const PasswordField = (props) => {
           onChange={props.handleChange}
           controlClassName={props.borderClass}
           trailingElement={isPasswordHidden ? ShowButton : HideButton}
-          floatingLabel={props.floatingLabel}
+          floatingLabel={props.staticLabel ? undefined : props.floatingLabel}
           placeholder={props.placeholder}
 
         />
@@ -148,6 +153,7 @@ const PasswordField = (props) => {
 };
 
 PasswordField.defaultProps = {
+  staticLabel: false,
   borderClass: '',
   errorMessage: '',
   handleBlur: null,
@@ -161,6 +167,7 @@ PasswordField.defaultProps = {
 };
 
 PasswordField.propTypes = {
+  staticLabel: PropTypes.bool,
   borderClass: PropTypes.string,
   errorMessage: PropTypes.string,
   floatingLabel: PropTypes.string.isRequired,

@@ -313,6 +313,7 @@ const RegistrationPage = (props) => {
                 handleErrorChange={handleErrorChange}
                 errorMessage={errors.name}
                 helpText={[formatMessage(messages['help.text.name'])]}
+                staticLabel
                 floatingLabel="الاسم الكامل"
                 placeholder="الاسم الكامل"
               />
@@ -324,6 +325,7 @@ const RegistrationPage = (props) => {
                 handleChange={handleOnChange}
                 errorMessage={errors.email}
                 helpText={[formatMessage(messages['help.text.email'])]}
+                staticLabel
                 floatingLabel="البريد الإلكتروني"
                 placeholder="البريد الإلكتروني"
               />
@@ -336,6 +338,7 @@ const RegistrationPage = (props) => {
                   handleErrorChange={handleErrorChange}
                   errorMessage={errors.username}
                   helpText={[formatMessage(messages['help.text.username.1']), formatMessage(messages['help.text.username.2'])]}
+                  staticLabel
                   floatingLabel="اسم المستخدم"
                   placeholder="اسم المستخدم"
                 />
@@ -347,6 +350,7 @@ const RegistrationPage = (props) => {
                   handleChange={handleOnChange}
                   handleErrorChange={handleErrorChange}
                   errorMessage={errors.password}
+                  staticLabel
                   floatingLabel="كلمة السر"
                   placeholder="كلمة السر"
                 />
