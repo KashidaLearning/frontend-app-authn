@@ -764,3 +764,17 @@ font-weight: 500px;
   font-weight: 500 !important;
   line-height: 20px !important;
 }
+
+/* ROWAD AUTH ALERT HEIGHT FIX */
+.rowad-auth-layout__glass-card {
+  height: auto !important;
+  min-height: 398px !important;
+  overflow: visible !important;
+}
+
+.rowad-auth-layout:has([role="alert"]) .rowad-auth-layout__form-panel,
+.rowad-auth-layout:has(.alert) .rowad-auth-layout__form-panel {
+  align-items: flex-start;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
