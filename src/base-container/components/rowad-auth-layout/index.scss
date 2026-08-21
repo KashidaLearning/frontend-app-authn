@@ -778,3 +778,30 @@ font-weight: 500px;
   padding-top: 48px;
   padding-bottom: 48px;
 }
+
+
+/* ROWAD REGISTRATION CARD CONTAINMENT FIX */
+.rowad-auth-layout__glass-card:has(#registration-form) {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  padding-bottom: 48px !important;
+  overflow: visible !important;
+}
+
+.rowad-auth-layout:has(#registration-form) {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow-y: visible !important;
+}
+
+.rowad-auth-layout:has(#registration-form) .rowad-auth-layout__form-panel {
+  align-items: flex-start !important;
+  padding-top: 48px !important;
+  padding-bottom: 48px !important;
+}
+
+.rowad-auth-layout #registration-form #register-user {
+  position: static !important;
+  margin-bottom: 0 !important;
+}
