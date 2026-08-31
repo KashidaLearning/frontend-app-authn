@@ -805,3 +805,7 @@ font-weight: 500px;
   position: static !important;
   margin-bottom: 0 !important;
 }
+
+[dir="rtl"] .rowad-auth-layout {
+  direction: ltr;
+}
