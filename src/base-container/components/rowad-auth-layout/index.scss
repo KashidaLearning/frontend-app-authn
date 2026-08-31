@@ -809,3 +809,54 @@ font-weight: 500px;
 [dir="rtl"] .rowad-auth-layout {
   direction: ltr;
 }
+
+/* ROWAD USERNAME SUGGESTIONS BELOW FIELD */
+.rowad-auth-layout #registration-form .username__form-group-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.rowad-auth-layout
+  #registration-form
+  .username__form-group-wrapper
+  > .pgn__form-group {
+  order: 1;
+}
+
+.rowad-auth-layout
+  #registration-form
+  .username__form-group-wrapper
+  > .username-suggestions {
+  position: static !important;
+  inset: auto !important;
+  order: 2;
+  display: flex !important;
+  width: 100%;
+  min-width: 0;
+  padding: 0 !important;
+  margin-top: 8px;
+  align-items: center;
+  gap: 8px;
+  direction: rtl;
+}
+
+.rowad-auth-layout
+  #registration-form
+  .username-scroll-suggested--form-field {
+  display: inline-flex;
+  flex: 1 1 auto;
+  width: auto !important;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.rowad-auth-layout
+  #registration-form
+  .username-suggestions__close__button {
+  position: static !important;
+  inset: auto !important;
+  flex: 0 0 auto;
+  margin: 0 !important;
+}
