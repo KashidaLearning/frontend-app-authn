@@ -1,6 +1,7 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
+
 import rowadArabicLogo from './rowad-logo-ar-light.png';
 import './index.scss';
 

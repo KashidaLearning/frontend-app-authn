@@ -50,7 +50,7 @@ const messages = defineMessages({
   // alert banner strings
   'reset.password.failure.heading': {
     id: 'reset.password.failure.heading',
-    defaultMessage: 'We couldn\'t reset your password.',
+    defaultMessage: 'لم نتمكن من إعادة تعيين كلمة المرور الخاصة بك.',
     description: 'Heading for reset password request failure',
   },
   'reset.password.form.submission.error': {
@@ -84,5 +84,4 @@ const messages = defineMessages({
     description: 'Error message that appears when server responds with 429 error code',
   },
 });
-
 export default messages;

@@ -139,7 +139,7 @@ const messages = defineMessages({
   // Error messages
   'registration.request.failure.header': {
     id: 'registration.request.failure.header',
-    defaultMessage: 'We couldn\'t create your account.',
+    defaultMessage: 'لم نتمكن من إنشاء حسابك.',
     description: 'error message when registration failure.',
   },
   'registration.empty.form.submission.error': {
@@ -164,14 +164,14 @@ const messages = defineMessages({
   },
   'registration.forbidden.username': {
     id: 'registration.forbidden.username',
-    defaultMessage: 'Usernames can\'t include words that could be mistaken for course roles. Please choose a different username.',
+    defaultMessage: 'لا يمكن لأسماء المستخدمين أن تتضمن كلمات قد يتم الخلط بينها وبين أدوار الدورات. يرجى اختيار اسم مستخدم مختلف.',
     description: '',
   },
   'registration.tpa.authentication.failure': {
     id: 'registration.tpa.authentication.failure',
-    defaultMessage: 'We are sorry, you are not authorized to access {platform_name} via this channel. '
-        + 'Please contact your learning administrator or manager in order to access {platform_name}.'
-        + '{lineBreak}{lineBreak}Error Details:{lineBreak}{errorMessage}',
+    defaultMessage: 'نعتذر، أنت غير مصرح بالوصول إلى {platform_name} عبر هذه القناة. '
+        + 'يرجى الاتصال بمسؤول التعلم الخاص بك أو مديرك للوصول إلى {platform_name}.'
+        + '{lineBreak}{lineBreak}تفاصيل الخطأ:{lineBreak}{errorMessage}',
     description: 'Error message third party authentication pipeline fails',
   },
   // Terms of Service and Honor Code

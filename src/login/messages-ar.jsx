@@ -49,14 +49,14 @@ const messages = defineMessages({
   },
   'non.compliant.password.message': {
     id: 'non.compliant.password.message',
-    defaultMessage: 'Your current password does not meet the new security requirements. '
-                    + 'We just sent a password-reset message to the email address associated with this account. '
-                    + 'Thank you for helping us keep your data safe.',
+    defaultMessage: 'كلمة المرور الحالية لا تلبي متطلبات الأمان الجديدة. '
+                    + 'لقد أرسلنا رسالة إعادة تعيين كلمة المرور إلى عنوان البريد الإلكتروني المرتبط بهذا الحساب. '
+                    + 'شكراً لمساعدتك لنا في الحفاظ على أمان بياناتك.',
     description: 'Error message for non-compliant password',
   },
   'account.locked.out.message.1': {
     id: 'account.locked.out.message.1',
-    defaultMessage: 'To protect your account, it\'s been temporarily locked. Try again in 30 minutes.',
+    defaultMessage: 'لحماية حسابك، تم قفله مؤقتاً. حاول مرة أخرى بعد 30 دقيقة.',
     description: 'Part of message for when user account has been locked out after multiple failed login attempts',
   },
   'username.or.email.format.validation.less.chars.message': {
@@ -138,7 +138,7 @@ const messages = defineMessages({
   },
   'login.failure.header.title': {
     id: 'login.failure.header.title',
-    defaultMessage: 'We couldn\'t sign you in.',
+    defaultMessage: 'لم نتمكن من تسجيل دخولك.',
     description: 'Login failure header message.',
   },
   'contact.support.link': {
@@ -179,14 +179,14 @@ const messages = defineMessages({
   },
   'password.security.nudge.body': {
     id: 'password.security.nudge.body',
-    defaultMessage: 'Our system detected that your password is vulnerable. '
-                    + 'We recommend you change it so that your account stays secure.',
+    defaultMessage: 'كشف نظامنا أن كلمة المرور الخاصة بك عرضة للخطر. '
+                    + 'نوصيك بتغييرها حتى يبقى حسابك آمناً.',
     description: 'Message copy for prompt that nudges user to change their vulnerable password',
   },
   'password.security.block.body': {
     id: 'password.security.block.body',
-    defaultMessage: 'Our system detected that your password is vulnerable. '
-                    + 'Change your password so that your account stays secure.',
+    defaultMessage: 'كشف نظامنا أن كلمة المرور الخاصة بك عرضة للخطر. '
+                    + 'غيّر كلمة المرور الخاصة بك حتى يبقى حسابك آمناً.',
     description: 'Message copy for prompt that asks user to change their vulnerable password',
   },
   'password.security.close.button': {
@@ -201,9 +201,9 @@ const messages = defineMessages({
   },
   'login.tpa.authentication.failure': {
     id: 'login.tpa.authentication.failure',
-    defaultMessage: 'We are sorry, you are not authorized to access {platform_name} via this channel. '
-        + 'Please contact your learning administrator or manager in order to access {platform_name}.'
-        + '{lineBreak}{lineBreak}Error Details:{lineBreak}{errorMessage}',
+    defaultMessage: 'نعتذر، أنت غير مصرح بالوصول إلى {platform_name} عبر هذه القناة. '
+        + 'يرجى الاتصال بمسؤول التعلم الخاص بك أو مديرك للوصول إلى {platform_name}.'
+        + '{lineBreak}{lineBreak}تفاصيل الخطأ:{lineBreak}{errorMessage}',
     description: 'Error message third party authentication pipeline fails',
   },
 });
