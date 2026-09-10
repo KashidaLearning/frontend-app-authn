@@ -19,7 +19,7 @@ export async function registerRequest(registrationInformation) {
     });
 
   return {
-    redirectUrl: data.redirect_url || `${getConfig().LMS_BASE_URL}/dashboard`,
+    redirectUrl: data.redirect_url || `${getConfig().LMS_BASE_URL}/`,
     success: data.success || false,
     authenticatedUser: data.authenticated_user,
   };
