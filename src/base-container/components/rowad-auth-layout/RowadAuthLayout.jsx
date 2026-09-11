@@ -1,11 +1,11 @@
 import React from 'react';
 
+import { getConfig } from '@edx/frontend-platform';
 import PropTypes from 'prop-types';
 
 import rowadArabicLogo from './rowad-logo-ar-light.png';
 import './index.scss';
 
-const ROWAD_WEBSITE_URL = 'https://d1p65zue2xzvrm.cloudfront.net/';
 const ROWAD_ARABIC_LOGO_URL = rowadArabicLogo;
 const RowadAuthLayout = ({ children }) => (
   <div className="rowad-auth-layout" dir="rtl">
@@ -16,7 +16,7 @@ const RowadAuthLayout = ({ children }) => (
     </main>
 
     <aside className="rowad-auth-layout__brand" aria-label="Rowad">
-      <a href={ROWAD_WEBSITE_URL} className="rowad-auth-layout__brand-link">
+      <a href={getConfig().LMS_BASE_URL || '/'} className="rowad-auth-layout__brand-link">
         <img
           src={ROWAD_ARABIC_LOGO_URL}
           alt="رواد"
