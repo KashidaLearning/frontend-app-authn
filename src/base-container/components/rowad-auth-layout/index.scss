@@ -1,11 +1,92 @@
+@font-face {
+  font-family: 'Rowad Noto Sans';
+  src: url('./fonts/rowad-noto-sans.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowad Noto Sans';
+  src: url('./fonts/rowad-noto-sans.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowad Noto Sans';
+  src: url('./fonts/rowad-noto-sans.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowad Noto Sans';
+  src: url('./fonts/rowad-noto-sans.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowad Noto Sans';
+  src: url('./fonts/rowad-noto-sans.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowad Noto Kufi Arabic';
+  src: url('./fonts/rowad-noto-kufi-arabic.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowad Noto Kufi Arabic';
+  src: url('./fonts/rowad-noto-kufi-arabic.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowad Noto Kufi Arabic';
+  src: url('./fonts/rowad-noto-kufi-arabic.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowad Noto Kufi Arabic';
+  src: url('./fonts/rowad-noto-kufi-arabic.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowad Noto Kufi Arabic';
+  src: url('./fonts/rowad-noto-kufi-arabic.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 .rowad-auth-layout {
   --font: "Rowad Noto Kufi Arabic", "Rowad Noto Sans", sans-serif;
 
   font-family: var(--font) !important;
   display: grid;
-  grid-template-areas: "form brand";
-  grid-template-columns: minmax(0, 774fr) minmax(0, 630fr);
+  grid-template-areas: "brand form";
+  grid-template-columns: minmax(0, 774px) minmax(0, 630px);
   align-items: stretch;
+  justify-content: center;
   gap: 12px;
 
   box-sizing: border-box;
@@ -23,6 +104,11 @@
       #16413d 50%,
       #0a1a19 100%
     );
+}
+
+#root .rowad-auth-layout,
+#root .rowad-auth-layout *:not(.fa):not(.fas):not(.far):not(.fab):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon-"]):not([class*=" icon-"]) {
+  font-family: var(--font) !important;
 }
 
 .rowad-auth-layout__form-panel {
