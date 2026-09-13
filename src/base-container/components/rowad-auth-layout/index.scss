@@ -1,3 +1,4 @@
+/*! rtl:begin:ignore */
 @font-face {
   font-family: 'Rowad Noto Sans';
   src: url('./fonts/rowad-noto-sans.woff2') format('woff2');
@@ -83,8 +84,8 @@
 
   font-family: var(--font) !important;
   display: grid;
-  grid-template-areas: "brand form";
-  grid-template-columns: minmax(0, 774px) minmax(0, 630px);
+  grid-template-areas: "form brand";
+  grid-template-columns: minmax(0, 630px) minmax(0, 774px);
   align-items: stretch;
   justify-content: center;
   gap: 12px;
@@ -188,7 +189,7 @@
   font-family: var(--font) !important;
   font-size: 16px;
   font-weight: 500;
-  line-height: 35px;
+  line-height: 40px;
   text-align: center;
 
   cursor: pointer;
@@ -227,7 +228,7 @@
 /* Exact Figma login form */
 .rowad-auth-layout #sign-in-form {
   display: grid;
-  grid-template-columns: 342px minmax(0, 166px);
+  grid-template-columns: minmax(0, 1fr);
   column-gap: 10px;
   row-gap: 10px;
 
@@ -315,7 +316,7 @@
 .rowad-auth-layout #sign-in {
   grid-column: 1;
   box-sizing: border-box !important;
-  width: 342px !important;
+  width: 100% !important;
   max-width: 100% !important;
   height: 47px !important;
   min-height: 47px !important;
@@ -351,13 +352,13 @@
     background-color: none !important;
 }
 .pgn__form-control-floating-label .pgn__form-control-floating-label-text {
-   
+
     background: none !important;
 }
- 
+
 /* Forgot-password area beside the button */
 .rowad-auth-layout #forgot-password {
-  grid-column: 2;
+  grid-column: 1 / -1;
   display: flex !important;
   align-items: center;
   justify-content: flex-start;
@@ -926,3 +927,109 @@ font-weight: 500px;
   flex: 0 0 auto;
   margin: 0 !important;
 }
+
+/* ROWAD_AUTH_FORM_LAYOUT_V2 */
+.rowad-auth-layout #sign-in-form > * {
+  min-width: 0;
+}
+
+.rowad-auth-layout #forgot-password {
+  justify-content: center;
+  min-height: 44px;
+  text-align: center !important;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+#root .rowad-auth-layout input.form-control:-webkit-autofill,
+#root .rowad-auth-layout input.form-control:-webkit-autofill:hover,
+#root .rowad-auth-layout input.form-control:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff;
+  -webkit-box-shadow: 0 0 0 1000px #294b48 inset !important;
+  box-shadow: 0 0 0 1000px #294b48 inset !important;
+}
+
+#root .rowad-auth-layout input.form-control:autofill {
+  color: #ffffff !important;
+  caret-color: #ffffff;
+  box-shadow: 0 0 0 1000px #294b48 inset !important;
+}
+
+.rowad-auth-layout input:focus-visible,
+.rowad-auth-layout button:focus-visible,
+.rowad-auth-layout a:focus-visible {
+  outline: 2px solid #f08f62 !important;
+  outline-offset: 3px;
+}
+
+
+/* ROWAD_DESKTOP_FORM_WIDTH_FIX */
+@media (min-width: 1200px) and (max-width: 1919.98px) {
+  .rowad-auth-layout {
+    grid-template-areas: "form brand";
+    grid-template-columns: minmax(0, 774px) minmax(0, 630px);
+    column-gap: 12px;
+  }
+
+  .rowad-auth-layout__form-panel {
+    padding-inline: 80px;
+  }
+
+  .rowad-auth-layout__glass-card {
+    width: 614px;
+    max-width: 100%;
+    padding-inline: 48px;
+    border-radius: 48px;
+  }
+}
+
+
+/* ROWAD_AUTH_TABS_FIGMA_DESKTOP */
+@media (min-width: 1200px) and (max-width: 1919.98px) {
+  .rowad-auth-layout .rowad-auth-tabs {
+    display: flex;
+    direction: rtl !important;
+    width: 100%;
+    max-width: 100%;
+    height: 40px;
+    margin-inline: auto;
+    padding: 0;
+    gap: 0;
+    background: #e8eeed;
+    border: 0;
+    border-radius: 29px;
+    overflow: hidden;
+  }
+
+  .rowad-auth-layout .rowad-auth-tabs__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 0;
+    height:40px;
+    padding: 0 12px;
+    margin: 0;
+    line-height: 20px;
+    font-size: 16px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    white-space: nowrap;
+  }
+
+  .rowad-auth-layout .rowad-auth-tabs__tab--active,
+  .rowad-auth-layout .rowad-auth-tabs__tab--active:hover,
+  .rowad-auth-layout .rowad-auth-tabs__tab--active:focus {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    background: #18504d;
+    border-radius: 19px;
+    box-shadow: 0 0 0 1px #18504d;
+  }
+}
+
+/*! rtl:end:ignore */
