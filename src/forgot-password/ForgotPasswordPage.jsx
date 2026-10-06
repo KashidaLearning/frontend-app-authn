@@ -95,18 +95,14 @@ const ForgotPasswordPage = (props) => {
   );
 
   return (
-    <BaseContainer>
+    <BaseContainer useRowadLayout>
       <Helmet>
         <title>{formatMessage(messages['forgot.password.page.title'],
           { siteName: getConfig().SITE_NAME })}
         </title>
       </Helmet>
-      <div>
-        <Tabs activeKey="" id="controlled-tab" onSelect={(key) => navigate(updatePathWithQueryParams(key))}>
-          <Tab title={tabTitle} eventKey={LOGIN_PAGE} />
-        </Tabs>
-        <div id="main-content" className="main-content">
-          <Form id="forget-password-form" name="forget-password-form" className="mw-xs">
+      <div className="mw-xs mt-3 mb-2">
+        <Form id="forget-password-form" name="forget-password-form">
             <ForgotPasswordAlert email={bannerEmail} emailError={formErrors} status={status} />
             <h2 className="h4">
               {formatMessage(messages['forgot.password.page.heading'])}
@@ -158,7 +154,6 @@ const ForgotPasswordPage = (props) => {
               </span>
             </p>
           </Form>
-        </div>
       </div>
     </BaseContainer>
   );
