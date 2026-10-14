@@ -111,7 +111,9 @@ const ForgotPasswordPage = (props) => {
               {formatMessage(messages['forgot.password.page.instructions'])}
             </p>
             <FormGroup
+              staticLabel
               floatingLabel={formatMessage(messages['forgot.password.page.email.field.label'])}
+              placeholder={formatMessage(messages['forgot.password.page.email.field.label'])}
               name="email"
               value={email}
               autoComplete="on"

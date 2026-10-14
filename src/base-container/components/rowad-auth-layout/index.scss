@@ -1032,4 +1032,167 @@ font-weight: 500px;
   }
 }
 
+/* ROWAD FORGOT PASSWORD — SAME LOOK AS SIGN IN / REGISTER */
+.rowad-auth-layout #forget-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 518px;
+  max-width: 100%;
+  margin: 0;
+  direction: rtl;
+  text-align: right;
+}
+
+.rowad-auth-layout #forget-password-form h2 {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+}
+
+.rowad-auth-layout #forget-password-form > p.mb-4 {
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+.rowad-auth-layout #forget-password-form .pgn__form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.rowad-auth-layout #forget-password-form .pgn__form-control-decorator-group {
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  overflow: hidden;
+  background: rgba(243, 243, 245, 0.05) !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.rowad-auth-layout #forget-password-form .form-control {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  padding: 4px 12px !important;
+  direction: rtl !important;
+  color: #ffffff !important;
+  text-align: right !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Help text under the field. */
+.rowad-auth-layout #forget-password-form .pgn__form-text,
+.rowad-auth-layout #forget-password-form .form-text-size {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 12px !important;
+}
+
+/* Orange submit button, same as Sign in. */
+.rowad-auth-layout #submit-forget-password {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 47px !important;
+  min-height: 47px !important;
+  padding: 0 18px !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 47px !important;
+  text-align: center !important;
+  background: #f08f62 !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.rowad-auth-layout #submit-forget-password:hover,
+.rowad-auth-layout #submit-forget-password:focus,
+.rowad-auth-layout #submit-forget-password:active {
+  color: #ffffff !important;
+  background: #e78053 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* "Need help / contact support" text and email link. */
+.rowad-auth-layout #forget-password-form p.small {
+  margin: 8px 0 0 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 13px !important;
+}
+
+.rowad-auth-layout #forget-password-form p.small a,
+.rowad-auth-layout #forget-password-form #forgot-password {
+  color: #f08f62 !important;
+  text-decoration: none !important;
+}
+
+.rowad-auth-layout #forget-password-form p.small a:hover,
+.rowad-auth-layout #forget-password-form #forgot-password:hover {
+  text-decoration: underline !important;
+}
+
+/* ROWAD AUTH ALERTS — fit the dark glass card */
+.rowad-auth-layout .alert {
+  margin: 0 0 24px !important;
+  padding: 16px 18px !important;
+  color: #ffffff !important;
+  background: rgba(239, 68, 68, 0.12) !important;
+  border: 1px solid rgba(248, 113, 113, 0.55) !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+}
+
+.rowad-auth-layout .alert *:not(svg):not(path) {
+  color: #ffffff !important;
+}
+
+.rowad-auth-layout .alert .alert-heading {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.rowad-auth-layout .alert p {
+  margin: 4px 0 0 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 13px !important;
+}
+
+.rowad-auth-layout .alert .alert-icon,
+.rowad-auth-layout .alert svg {
+  color: #f87171 !important;
+}
+
+.rowad-auth-layout .alert a {
+  color: #f08f62 !important;
+}
+
+/* Success messages (e.g. "check your email") in green. */
+.rowad-auth-layout .alert-success {
+  background: rgba(34, 197, 94, 0.12) !important;
+  border-color: rgba(74, 222, 128, 0.55) !important;
+}
+
+.rowad-auth-layout .alert-success .alert-icon,
+.rowad-auth-layout .alert-success svg {
+  color: #4ade80 !important;
+}
+
+
 /*! rtl:end:ignore */
