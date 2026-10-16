@@ -6,6 +6,7 @@ import {
   AUTHN_PROGRESSIVE_PROFILING, RECOMMENDATIONS, REDIRECT,
 } from '../data/constants';
 import { setCookie } from '../data/utils';
+import { rowadPostLoginUrl } from '../rowad/rowadSite';
 
 const RedirectLogistration = (props) => {
   const {
@@ -31,7 +32,7 @@ const RedirectLogistration = (props) => {
     if (finishAuthUrl && !redirectUrl.includes(finishAuthUrl)) {
       finalRedirectUrl = getConfig().LMS_BASE_URL + finishAuthUrl;
     } else {
-      finalRedirectUrl = redirectUrl;
+      finalRedirectUrl = rowadPostLoginUrl(redirectUrl);
     }
 
     // Redirect to Progressive Profiling after successful registration

@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { getConfig } from '@edx/frontend-platform';
 import PropTypes from 'prop-types';
+
+import { rowadHomeUrl } from '../../../rowad/rowadSite';
 
 import rowadArabicLogo from './rowad-logo-ar-light.png';
 import './index.scss';
@@ -16,7 +17,7 @@ const RowadAuthLayout = ({ children }) => (
     </main>
 
     <aside className="rowad-auth-layout__brand" aria-label="Rowad">
-      <a href={getConfig().LMS_BASE_URL || '/'} className="rowad-auth-layout__brand-link">
+      <a href={rowadHomeUrl()} className="rowad-auth-layout__brand-link">
         <img
           src={ROWAD_ARABIC_LOGO_URL}
           alt="رواد"
